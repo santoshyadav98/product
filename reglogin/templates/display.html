@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form action='/dislpay' method='get'>
+<body bgcolor="#00ffff"><center><table border=3px solid red>
+<h1> welcome product display page</h1>
+<tr><th>ProductID</th><br><th>productName</th><br><th>ProductCost</th><th>ProductMfdt</th><th>ProductExpdt</th>
+{% for rec in record %}
+<tr><td>{{rec.pid}}</td><td>{{rec.pname}}</td><td>{{rec.pcost}}</td><td>{{rec.pmfdt}}</td><td>{{rec.pexpdt}}</td></tr><br>
+{% endfor %}
+<tr><td><a href="./updateinput">click for update product</a></td><br><td><a href="./delete">click for delete product</a></td></tr>
+</form>
+</center>
+</body>
+</html>

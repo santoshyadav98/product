@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#00ffff" border=1px solid black><center><table border=3px solid red>
+    <form action="./deleteview" method='get'>
+        {% csrf_token %}
+<tr><td><h1> welcome to prduct delete page</h1></td>
+<tr><td><h1>Select which product u want to delete</h1></td>
+    
+    <tr><td>Select product name:<Select name="t2"><br>
+       
+        {% for p in record %}
+            
+            <option value='{{p.pname}}'>{{p.pname}}</option>
+        {% endfor %}
+        <Select><br>
+        <tr><td><input type="submit" value="delete" ><br><td></select>
+<tr><td> <button><a href="./display">display product</a></button></td>
+</tr>
+</form>
+</center>
+</body>
+</html>
